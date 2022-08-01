@@ -1,7 +1,6 @@
 {
-  "index": "Introduction",
-  "get-started": "Get Started",
-  "features": "Features",
-  "themes": "Themes",
-  "advanced": "Advanced"
+  "index": "소개",
+  "techs": "기술 스택",
+  "tutorial": "서비스 따라 만들어보기",
+  "sessions": "개발 스토리"
 }

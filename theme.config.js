@@ -1,12 +1,12 @@
 export default {
-  github: 'https://github.com/shuding/nextra',
-  docsRepositoryBase: 'https://github.com/shuding/nextra/blob/master',
-  titleSuffix: ' – Nextra',
+  github: 'https://github.com/icecream0910/sungil-meal-app',
+  docsRepositoryBase: 'https://github.com/icecream0910/ssoak-docs',
+  titleSuffix: ' – 쏙',
   logo: (
     <>
-      <span className="mr-2 font-extrabold hidden md:inline">Nextra</span>
+      <span className="mr-2 font-extrabold hidden md:inline">쏙</span>
       <span className="text-gray-600 font-normal hidden md:inline">
-        The Next.js Static Site Generator
+        개발 문서
       </span>
     </>
   ),
@@ -15,16 +15,16 @@ export default {
       <meta name="msapplication-TileColor" content="#ffffff" />
       <meta name="theme-color" content="#ffffff" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta httpEquiv="Content-Language" content="en" />
-      <meta name="description" content="Nextra: the Next.js site builder" />
-      <meta name="og:description" content="Nextra: the Next.js site builder" />
+      <meta httpEquiv="Content-Language" content="ko" />
+      <meta name="description" content="쏙 - 쏙 개발 과정이 궁금하다면" />
+      <meta name="og:description" content="쏙 - 쏙 개발 과정이 궁금하다면" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:image" content="https://nextra.vercel.app/og.png" />
-      <meta name="twitter:site:domain" content="nextra.vercel.app" />
-      <meta name="twitter:url" content="https://nextra.vercel.app" />
-      <meta name="og:title" content="Nextra: Next.js static site generator" />
-      <meta name="og:image" content="https://nextra.vercel.app/og.png" />
-      <meta name="apple-mobile-web-app-title" content="Nextra" />
+      <meta name="twitter:image" content="https://i.imgur.com/5LqdyDL.png" />
+      <meta name="twitter:site:domain" content="ssoak-docs.vercel.app" />
+      <meta name="twitter:url" content="https://ssoak-docs.vercel.app" />
+      <meta name="og:title" content="쏙 - 쏙 개발 과정이 궁금하다면" />
+      <meta name="og:image" content="https://i.imgur.com/5LqdyDL.png" />
+      <meta name="apple-mobile-web-app-title" content="쏙" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
@@ -61,7 +61,7 @@ export default {
   prevLinks: true,
   nextLinks: true,
   footer: true,
-  footerEditLink: 'Edit this page on GitHub',
-  footerText: <>MIT {new Date().getFullYear()} © Nextra.</>,
-  unstable_faviconGlyph: '👋',
+  footerEditLink: '페이지 수정 요청',
+  footerText: <> © {new Date().getFullYear()} Yun Taein(@Ice Cream).</>,
+  unstable_faviconGlyph: '🧑‍💻',
 }
