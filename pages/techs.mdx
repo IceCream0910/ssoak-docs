@@ -1,95 +1,43 @@
-# Get Started
-
-## Quick Start with Vercel
-
-You can start by creating your own Nextra site and deploying to Vercel by clicking the link:
-
-[![](https://vercel.com/button)](https://vercel.com/new/clone?demo-description=Markdown%20powered%20docs%20site.%20Built%20with%20Next.js.&demo-image=https%3A%2F%2Fnextra.vercel.app%2Fdemo.png&demo-title=Documentation%20Starter%20Kit&demo-url=https%3A%2F%2Fnextra.vercel.app%2F&project-name=nextjs-docs&repository-name=nextjs-docs&s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra&from=templates)
-
-Vercel will create the Nextra repository and deploy the site for you with just a few clicks.  
-Once done, every change in the repository will be deployed automatically.
-
-## Create Manually
-
-Nextra works like a Next.js plugin, and it accepts a theme config (layout) to render the page. To start:
-
-1. Install Next.js, Nextra and React: `yarn add next nextra react react-dom`
-
-2. Install the docs theme (you can use any theme you like): `yarn add nextra-theme-docs`
-
-3. Create the following Next.js config:
-
-```jsx
-// next.config.js
-const withNextra = require('nextra')({
-  theme: 'nextra-theme-docs',
-  themeConfig: './theme.config.js',
-  // optional: add `unstable_staticImage: true` to enable Nextra's auto image import
-})
-module.exports = withNextra()
-```
-
-4. Create a `theme.config.js` file for the docs theme:
-
-```jsx
-// theme.config.js
-export default {
-  projectLink: 'https://github.com/shuding/nextra', // GitHub link in the navbar
-  docsRepositoryBase: 'https://github.com/shuding/nextra/blob/master', // base URL for the docs repository
-  titleSuffix: ' – Nextra',
-  nextLinks: true,
-  prevLinks: true,
-  search: true,
-  customSearch: null, // customizable, you can use algolia for example
-  darkMode: true,
-  footer: true,
-  footerText: `MIT ${new Date().getFullYear()} © Shu Ding.`,
-  footerEditLink: `Edit this page on GitHub`,
-  logo: (
-    <>
-      <svg>...</svg>
-      <span>Next.js Static Site Generator</span>
-    </>
-  ),
-  head: (
-    <>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="Nextra: the next docs builder" />
-      <meta name="og:title" content="Nextra: the next docs builder" />
-    </>
-  ),
-}
-```
-
 import Callout from 'nextra-theme-docs/callout'
 
+# 사용된 기술
+
+쏙을 개발하기 위해 어떤 프로그래밍 언어들과 프레임워크 등 기술들이 사용되었을까요?
+---
+### HTML/CSS/JS
+HTML과 CSS, JS는 웹 개발을 위해 반드시 필요한 기술입니다.
+
+HTML은 '마크업 언어'로 화면에 구성요소들을 배치할 수 있는 수단이에요.
+CSS(Cascading Style Sheets)는 언어가 아닌 스타일 문서입니다. 'HTML'에서 만든 요소들의 디자인을 정의해주는 문서라고 볼 수 있습니다.
+JS는 Javascript(자바스크립트)를 말하는데, 이게 바로 프로그래밍 언어에 속한다고 볼 수 있습니다.
+브라우저에서 다양한 일을 수행하고 서버에서 데이터를 가져와 HTML과 CSS로 구성한 화면에 값을 변경해주는 데 사용됩니다.
+
+### jQuery
+제이쿼리는 웹사이트에 자바스크립트를 쉽게 활용할 수 있도록 도와주는 오픈소스 기반의 자바스크립트 라이브러리입니다.
 <Callout>
-  More configuration options for the docs theme can be found
-  [here](/themes/docs/configuration).
+  라이브러리란? | 재사용이 필요한 기능으로 반복적인 코드 작성을 없애기 위해 언제든지 필요한 곳에서 호출하여 사용할 수 있도록 만들어진 것.
 </Callout>
+보다 쉽게 HTML에서 정의한 요소에 접근할 수 있도록 기능을 제공하고 있으며 ajax라고 하는 네트워크 관련 기능도 있어 채택하였습니다.
+>> 2020년 “웹사이트용 자바스크립트 라이브러리 사용 동향”에서 제이쿼리는 76%의 사용률로 압도적인 1위를 기록하고 있습니다.
+그러나 최근 여러 최신 라이브러리들이 등장하면서 jquery의 위상은 낮아지고 있는 것도 사실입니다. 그러나 지속적인 업데이트가 이루어지고 있으며 여전히 많은 서비스에서 사용되고 있는 라이브러리입니다.
 
-5. Create `pages/_app.js` and include the theme stylesheet:
+---
+## 서버 & 데이터베이스
 
-```jsx
-import 'nextra-theme-docs/style.css'
-
-export default function Nextra({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
-```
-
-6. You are good to go! Run `yarn next` to start.
+### Firebase 
+구글에서 운영 중인 모바일 애플리케이션 개발 플랫폼으로 실시간 데이터베이스, 인증(로그인), 클라우드 메시징(푸시 알림) 등 다양한 기능을 제공합니다.
+쏙의 커뮤니티 기능과 수행평가 리스트 기능에 데이터베이스와 로그인 기능 동작에 사용되고 있습니다.
 
 ---
 
-<span id="sidebar-and-anchor-links" />
-<Callout>
-  Any `.md` or `.mdx` file will turn into a doc page and be displayed in
-  sidebar. You can also create a `meta.json` file to customize the page order
-  and title. <br /> Check the source code: https://github.com/shuding/nextra for
-  more information.
-</Callout>
+## 안드로이드 앱
+
+### Kotlin
+안드로이드 앱을 개발하기 위한 프로그래밍 언어로는 Java와 Kotlin(코틀린)이 대표적입니다. 현재는 Java 대신 Kotlin이 공식 언어로 채택된 상태이며, Java와 유사하지만 보다 간결하고 효율적인 코드를 작성할 수 있습니다.
+쏙의 안드로이드 앱 역시 Kotlin 기반으로 개발되고 있습니다.
+
+---
 
 <Callout>
-You can also use [`<style jsx>`](https://nextjs.org/docs/basic-features/built-in-css-support#css-in-js) to style elements inside `theme.config.js`.
+  사용된 모든 라이브러리나 프레임워크 등을 기술하고 있지는 않습니다. 주요 기술 스택들을 중심으로 추가 예정입니다.
 </Callout>
